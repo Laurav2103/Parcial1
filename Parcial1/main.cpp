@@ -46,7 +46,7 @@ bool defensivo(float HD, float posy, float ang, float Vin,float d ){ //determina
 void puntos(float *angulo,float *v,float d,float HD,float H0){
     double xy[3][2]={{d,HD},{(d-0.025*d),HD},{(d+0.025*d),(HD+0.025*d)}};
     for(int i=0;i<3;i++){
-        v[i]=(xy[i][0]/cos(angulo[i]))*sqrt(4.9/(xy[i][0]*tan(angulo[i])+H0-xy[i][1]));// velocidad que compromete el canon defensivo
+        v[i]=(xy[i][0]/cos(angulo[i]))*sqrt(4.9/(xy[i][0]*tan(angulo[i])+H0-xy[i][1]));// velocidad que deben tener para ir de su pto de origen hasta un punto xy cualquiera
     }
 
 }
@@ -54,7 +54,7 @@ void puntos(float *angulo,float *v,float d,float HD,float H0){
 void puntos2(float *angulo,float *v,float d,float H0){
     double xy[3][2]={{0,H0},{(0.005*d),H0},{(0.025*d),(H0+0.025*d)}};
     for(int i=0;i<3;i++){
-        v[i]=(xy[i][0]/cos(angulo[i]))*sqrt(4.9/(xy[i][0]*tan(angulo[i])+H0-xy[i][1]));// velocidad que compromete el canon defensivo
+        v[i]=(xy[i][0]/cos(angulo[i]))*sqrt(4.9/(xy[i][0]*tan(angulo[i])+H0-xy[i][1]));// velocidad que deben tener para ir de su pto de origen hasta un punto xy cualquiera
     }
 
 }
